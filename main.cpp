@@ -1,45 +1,52 @@
 #include <iostream>
-#include <iostream>
+#include <string>
 #include <conio.h>
-#include <string.h>
 
 using namespace std;
+	string nombres[10];
+	int notas[10];
+	int m;
+	int suma;
+	int b=0;
 int main(){
-int i;	
+	 cout<<"Bienvenido al menu, elija una opcion"<<endl;
+while (m != 5){
 
-	cout<<"ingrese el nombre de las 5 personas: "<<endl;
+ cout<<"Opcion 1: Nombres y Apellidos"<<endl;
+ cout<<"Opcion 2: Notas"<<endl;
+ cout<<"Opcion 3: Visualización de notas"<<endl;
+ cout<<"Opcion 4: Promedio total"<<endl;
+ cout<<"Opcion 5: Salir"<<endl;
+ cin>>m;
+
+
+
+switch(m){
+case 1:	cout<<"Por favor, coloque los nombres y apellidos, separarlos por un guión bajo"<<endl;
+	for(int i=0; i<10; i++){
+		
+	 cin>>nombres[i];
+	}
+break;
+case 2:	cout<<"Por favor, coloque las notas"<<endl;
 	
-	char nombre[20];
-	char name[20];
-	char nom[20];
-	char nome[20];
-	char namn[20];
-	cin.getline(nombre,20,'\n'); 
-	cin.getline(name,20,'\n');
-	cin.getline(nom,20,'\n');
-	cin.getline(nome,20,'\n');
-	cin.getline(namn,20,'\n');	
-				
-	cout<<nombre<<endl;
-	int distancia1 = strlen(nombre); 
-	cout<<"\ncantidad de espacios usados: "<<distancia1<<endl;
-	
-		cout<<name<<endl;
-	int distancia2 = strlen(name);
-	cout<<"\ncantidad de espacios usados: "<<distancia2<<endl;
-	
-		cout<<nom<<endl;
-	int distancia3 = strlen(nom);  
-	cout<<"\ncantidad de espacios usado: "<<distancia3<<endl;
-	
-		cout<<nome<<endl;
-	int distancia4 = strlen(nome);  
-	cout<<"\ncantidad de espacios usados: "<<distancia4<<endl;
-	
-		cout<<namn<<endl;
-	int distancia5 = strlen(namn);  
-	cout<<"\ncantidad de espacios usados: "<<distancia5<<endl;
-	
-	
-	return 0;
+	for(int i=0; i<10; i++){
+		
+	 cin>>notas[i];
+	}
+break;	
+case 3:	cout<<"El listado de nombres es: "<<endl;
+	for(int j=0; j<10; j++){
+	cout<<nombres[j]<<" "<<notas[j]<<endl;
+	}
+break;
+case 4:	
+	for(int i=0; i<10; i++){    
+	suma+= b + notas[i];
+	}  
+    cout<<"El promedio es: "<<suma<<endl;
+break;
 }
+}
+}
+
